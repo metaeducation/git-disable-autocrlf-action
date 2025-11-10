@@ -1,5 +1,14 @@
 # git-disable-autocrlf-action
-Disable Git Auto CR/LF Conversion
+
+GitHub CI checkout on Windows auto translates LF to CR/LF in files:
+
+<https://github.com/actions/checkout/issues/135>
+
+The long view on this--which causes the least problems cross-platform--is to and prohibit CR/LF in source by default.
+
+<http://blog.hostilefork.com/death-to-carriage-return/>
+
+While this is a trivial GitHub action, putting the behavior into an action means that this README.md can point to the rationale behind it, so that every usage site doesn't have to document it.
 
 ## Usage
 
