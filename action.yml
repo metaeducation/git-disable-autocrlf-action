@@ -1,0 +1,10 @@
+name: 'Disable Git Auto CRLF'
+description: 'Disables LF to CRLF auto translation in Git'
+runs:
+  using: 'composite'
+  steps:
+    - name: Disable Git Auto CRLF
+      shell: bash
+      run: |
+        git config --global core.autocrlf false
+        git config --global core.eol lf
